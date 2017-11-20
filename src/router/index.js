@@ -8,6 +8,7 @@ import { Life } from '../views/life/index'
 import { Message } from '../views/message/index'
 import { SignIn } from '../views/signin/index'
 import { SignUp } from '../views/signup/index'
+import { Article } from '../views/article/index'
 
 Vue.use(Router)
 
@@ -75,6 +76,15 @@ export default new Router({
       children: [{
         path: '/signUp',
         component: SignUp
+      }]
+    },
+    {
+      path: '/article',
+      name: 'Layout',
+      component: Layout,
+      children: [{
+        path: '/article',
+        component: Article
       }]
     }
   ]
